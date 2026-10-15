@@ -6,11 +6,12 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "10"
+      VERSION: "11"
       USERNAME: ${WINDOWS_USERNAME}   # Usa un archivo .env para variables sensibles
       PASSWORD: ${WINDOWS_PASSWORD}   # Usa un archivo .env para variables sensibles
-      RAM_SIZE: "16G"
-      CPU_CORES: "4"
+      RAM_SIZE: "24G"
+      CPU_CORES: "6"
+      DISK_SIZE: "1024G"
     cap_add:
       - NET_ADMIN
     ports:
@@ -26,4 +27,4 @@ services:
     restart: always
 
 volumes:
-  windows-data: 
+  windows-data:
